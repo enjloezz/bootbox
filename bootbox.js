@@ -387,7 +387,8 @@
       className: "bootbox-prompt",
       buttons: createLabels("cancel", "confirm"),
       value: "",
-      inputType: "text"
+      inputType: "text",
+	  miniModal: false
     };
 
     options = validateButtons(
@@ -633,6 +634,10 @@
         closeButton.css("margin-top", "-2px").prependTo(body);
       }
     }
+	
+	if (options.miniModal) {
+		dialog.find(".modal-dialog").addClass("modal-sm");
+	}
 
     if (options.title) {
       dialog.find(".modal-title").html(options.title);
