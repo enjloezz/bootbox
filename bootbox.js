@@ -88,7 +88,8 @@
     // show the dialog immediately by default
     show: true,
     // dialog container
-    container: "body"
+    container: "body",
+	miniModal: false,
   };
 
   // our public object; augmented after our private API
@@ -387,8 +388,7 @@
       className: "bootbox-prompt",
       buttons: createLabels("cancel", "confirm"),
       value: "",
-      inputType: "text",
-	  miniModal: false
+      inputType: "text"
     };
 
     options = validateButtons(
