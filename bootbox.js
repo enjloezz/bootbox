@@ -49,7 +49,7 @@
     footer:
       "<div class='modal-footer'></div>",
     closeButton:
-      "<button type='button' class='bootbox-close-button close' aria-hidden='true'>&times;</button>",
+      "<button type='button' class='bootbox-close-button close' aria-hidden='true'><span class='icon-close'></span></button>",
     form:
       "<form class='bootbox-form'></form>",
     inputs: {
@@ -628,7 +628,7 @@
       var closeButton = $(templates.closeButton);
 
       if (options.title) {
-        dialog.find(".modal-header").prepend(closeButton);
+        dialog.find(".modal-dialog").prepend(closeButton);
       } else {
         closeButton.css("margin-top", "-2px").prependTo(body);
       }
